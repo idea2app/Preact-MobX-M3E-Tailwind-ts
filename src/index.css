@@ -1,11 +1,273 @@
-:root {
-  --bs-bg-opacity: 1;
-  --bs-primary-rgb: 25, 137, 250;
-  --bs-secondary-rgb: 109, 117, 125;
-  --bs-info-rgb: 18, 202, 240;
-  --bs-success-rgb: 27, 135, 84;
-  --bs-warning-rgb: 255, 192, 9;
-  --bs-danger-rgb: 238, 13, 36;
-  --bs-light-rgb: 247, 248, 250;
-  --bs-white-rgb: 255, 255, 255;
+@import "tailwindcss";
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+@layer base {
+    /*
+    The default border color has changed to `currentColor` in Tailwind CSS v4,
+    so we've added these compatibility styles to make sure everything still
+    looks the same as it did with Tailwind CSS v3.
+    If we ever want to remove these styles, we need to add an explicit border
+    color utility to any element that depends on these defaults.
+  */
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+}
+
+/*
+  https://github.com/adandedjanstephane-git/Angular-Material-Tailwind-Integration/blob/main/material-tailwind-theme.css
+*/
+@theme {
+    /* 
+  Material x Tailwind CSS Variable Mapping
+  ------------------------------------------------
+  This file maps Material Design System tokens (--md-sys-*) to project-scoped CSS custom properties
+  compatible with Tailwind CSS v4 utility variable namespaces.
+
+  Usage:
+    - Use these variables via Tailwind utility classes, e.g.:
+        <div class="bg-primary-container text-on-surface">
+    - For theming, override the --md-sys-* tokens globally (:root) or per scope (e.g., .theme-dark).
+    - Do not hardcode values; always use variables for maintainability and theme support.
+*/
+
+    /* ===========================
+   COLOR VARIABLES
+   Map Material color tokens to Tailwind-friendly CSS vars.
+   =========================== */
+    --color-background: var(--md-sys-color-background);
+    --color-error: var(--md-sys-color-error);
+    --color-error-container: var(--md-sys-color-error-container);
+    --color-inverse-on-surface: var(--md-sys-color-inverse-on-surface);
+    --color-inverse-primary: var(--md-sys-color-inverse-primary);
+    --color-inverse-surface: var(--md-sys-color-inverse-surface);
+    --color-on-background: var(--md-sys-color-on-background);
+    --color-on-error: var(--md-sys-color-on-error);
+    --color-on-error-container: var(--md-sys-color-on-error-container);
+    --color-on-primary: var(--md-sys-color-on-primary);
+    --color-on-primary-container: var(--md-sys-color-on-primary-container);
+    --color-on-primary-fixed: var(--md-sys-color-on-primary-fixed);
+    --color-on-primary-fixed-variant: var(
+        --md-sys-color-on-primary-fixed-variant
+    );
+    --color-on-secondary: var(--md-sys-color-on-secondary);
+    --color-on-secondary-container: var(--md-sys-color-on-secondary-container);
+    --color-on-secondary-fixed: var(--md-sys-color-on-secondary-fixed);
+    --color-on-secondary-fixed-variant: var(
+        --md-sys-color-on-secondary-fixed-variant
+    );
+    --color-on-surface: var(--md-sys-color-on-surface);
+    --color-on-surface-variant: var(--md-sys-color-on-surface-variant);
+    --color-on-tertiary: var(--md-sys-color-on-tertiary);
+    --color-on-tertiary-container: var(--md-sys-color-on-tertiary-container);
+    --color-on-tertiary-fixed: var(--md-sys-color-on-tertiary-fixed);
+    --color-on-tertiary-fixed-variant: var(
+        --md-sys-color-on-tertiary-fixed-variant
+    );
+    --color-outline: var(--md-sys-color-outline);
+    --color-outline-variant: var(--md-sys-color-outline-variant);
+    --color-primary: var(--md-sys-color-primary);
+    --color-primary-container: var(--md-sys-color-primary-container);
+    --color-primary-fixed: var(--md-sys-color-primary-fixed);
+    --color-primary-fixed-dim: var(--md-sys-color-primary-fixed-dim);
+    --color-scrim: var(--md-sys-color-scrim);
+    --color-secondary: var(--md-sys-color-secondary);
+    --color-secondary-container: var(--md-sys-color-secondary-container);
+    --color-secondary-fixed: var(--md-sys-color-secondary-fixed);
+    --color-secondary-fixed-dim: var(--md-sys-color-secondary-fixed-dim);
+    --color-shadow: var(--md-sys-color-shadow);
+    --color-surface: var(--md-sys-color-surface);
+    --color-surface-bright: var(--md-sys-color-surface-bright);
+    --color-surface-container: var(--md-sys-color-surface-container);
+    --color-surface-container-high: var(--md-sys-color-surface-container-high);
+    --color-surface-container-highest: var(
+        --md-sys-color-surface-container-highest
+    );
+    --color-surface-container-low: var(--md-sys-color-surface-container-low);
+    --color-surface-container-lowest: var(
+        --md-sys-color-surface-container-lowest
+    );
+    --color-surface-dim: var(--md-sys-color-surface-dim);
+    --color-surface-tint: var(--md-sys-color-surface-tint);
+    --color-surface-variant: var(--md-sys-color-surface-variant);
+    --color-tertiary: var(--md-sys-color-tertiary);
+    --color-tertiary-container: var(--md-sys-color-tertiary-container);
+    --color-tertiary-fixed: var(--md-sys-color-tertiary-fixed);
+    --color-tertiary-fixed-dim: var(--md-sys-color-tertiary-fixed-dim);
+
+    /* ===========================
+   FONT SIZE VARIABLES
+   Map Material text size tokens.
+   =========================== */
+
+    --text-body-large: var(--md-sys-typescale-body-large-font-size);
+    --text-body-medium: var(--md-sys-typescale-body-medium-font-size);
+    --text-body-small: var(--md-sys-typescale-body-small-font-size);
+    --text-display-large: var(--md-sys-typescale-display-large-font-size);
+    --text-display-medium: var(--md-sys-typescale-display-medium-font-size);
+    --text-display-small: var(--md-sys-typescale-display-small-font-size);
+    --text-headline-large: var(--md-sys-typescale-headline-large-font-size);
+    --text-headline-medium: var(--md-sys-typescale-headline-medium-font-size);
+    --text-headline-small: var(--md-sys-typescale-headline-small-font-size);
+    --text-label-large: var(--md-sys-typescale-label-large-font-size);
+    --text-label-medium: var(--md-sys-typescale-label-medium-font-size);
+    --text-label-small: var(--md-sys-typescale-label-small-font-size);
+    --text-title-large: var(--md-sys-typescale-title-large-font-size);
+    --text-title-medium: var(--md-sys-typescale-title-medium-font-size);
+    --text-title-small: var(--md-sys-typescale-title-small-font-size);
+
+    /* ===========================
+   FONT WEIGHT VARIABLES
+   Map Material font weight tokens.
+   =========================== */
+
+    --font-weight-body-large-weight: var(
+        --md-sys-typescale-body-large-font-weight
+    );
+    --font-weight-body-medium-weight: var(
+        --md-sys-typescale-body-medium-font-weight
+    );
+    --font-weight-body-small-weight: var(
+        --md-sys-typescale-body-small-font-weight
+    );
+    --font-weight-display-large-weight: var(
+        --md-sys-typescale-display-large-font-weight
+    );
+    --font-weight-display-medium-weight: var(
+        --md-sys-typescale-display-medium-font-weight
+    );
+    --font-weight-display-small-weight: var(
+        --md-sys-typescale-display-small-font-weight
+    );
+    --font-weight-headline-large-weight: var(
+        --md-sys-typescale-headline-large-font-weight
+    );
+    --font-weight-headline-medium-weight: var(
+        --md-sys-typescale-headline-medium-font-weight
+    );
+    --font-weight-headline-small-weight: var(
+        --md-sys-typescale-headline-small-font-weight
+    );
+    --font-weight-label-large-weight: var(
+        --md-sys-typescale-label-large-font-weight
+    );
+    --font-weight-label-large-prominent-weight: var(
+        --md-sys-typescale-label-large-weight-prominent
+    );
+    --font-weight-label-medium-weight: var(
+        --md-sys-typescale-label-medium-font-weight
+    );
+    --font-weight-label-medium-prominent-weight: var(
+        --md-sys-typescale-label-medium-weight-prominent
+    );
+    --font-weight-label-small-weight: var(
+        --md-sys-typescale-label-small-font-weight
+    );
+    --font-weight-title-large-weight: var(
+        --md-sys-typescale-title-large-font-weight
+    );
+    --font-weight-title-medium-weight: var(
+        --md-sys-typescale-title-medium-font-weight
+    );
+    --font-weight-title-small-weight: var(
+        --md-sys-typescale-title-small-font-weight
+    );
+
+    /* ===========================
+   LETTER SPACING (TRACKING)
+   Map Material tracking tokens.
+   =========================== */
+
+    --tracking-body-large: var(--md-sys-typescale-body-large-tracking);
+    --tracking-body-medium: var(--md-sys-typescale-body-medium-tracking);
+    --tracking-body-small: var(--md-sys-typescale-body-small-tracking);
+    --tracking-display-large: var(--md-sys-typescale-display-large-tracking);
+    --tracking-display-medium: var(--md-sys-typescale-display-medium-tracking);
+    --tracking-display-small: var(--md-sys-typescale-display-small-tracking);
+    --tracking-headline-large: var(--md-sys-typescale-headline-large-tracking);
+    --tracking-headline-medium: var(
+        --md-sys-typescale-headline-medium-tracking
+    );
+    --tracking-headline-small: var(--md-sys-typescale-headline-small-tracking);
+    --tracking-label-large: var(--md-sys-typescale-label-large-tracking);
+    --tracking-label-medium: var(--md-sys-typescale-label-medium-tracking);
+    --tracking-label-small: var(--md-sys-typescale-label-small-tracking);
+    --tracking-title-large: var(--md-sys-typescale-title-large-tracking);
+    --tracking-title-medium: var(--md-sys-typescale-title-medium-tracking);
+    --tracking-title-small: var(--md-sys-typescale-title-small-tracking);
+
+    /* ===========================
+   LINE HEIGHT (LEADING)
+   Map Material line height tokens.
+   =========================== */
+
+    --leading-body-large: var(--md-sys-typescale-body-large-line-height);
+    --leading-body-medium: var(--md-sys-typescale-body-medium-line-height);
+    --leading-body-small: var(--md-sys-typescale-body-small-line-height);
+    --leading-display-large: var(--md-sys-typescale-display-large-line-height);
+    --leading-display-medium: var(
+        --md-sys-typescale-display-medium-line-height
+    );
+    --leading-display-small: var(--md-sys-typescale-display-small-line-height);
+    --leading-headline-large: var(
+        --md-sys-typescale-headline-large-line-height
+    );
+    --leading-headline-medium: var(
+        --md-sys-typescale-headline-medium-line-height
+    );
+    --leading-headline-small: var(
+        --md-sys-typescale-headline-small-line-height
+    );
+    --leading-label-large: var(--md-sys-typescale-label-large-line-height);
+    --leading-label-medium: var(--md-sys-typescale-label-medium-line-height);
+    --leading-label-small: var(--md-sys-typescale-label-small-line-height);
+    --leading-title-large: var(--md-sys-typescale-title-large-line-height);
+    --leading-title-medium: var(--md-sys-typescale-title-medium-line-height);
+    --leading-title-small: var(--md-sys-typescale-title-small-line-height);
+
+    /* ===========================
+   RADIUS VARIABLES
+   Map Material corner radius tokens.
+   =========================== */
+
+    --radius-extra-large: var(--md-sys-shape-corner-value-extra-large);
+    --radius-extra-large-top: var(--md-sys-shape-corner-value-extra-large-top);
+    --radius-extra-small: var(--md-sys-shape-corner-value-extra-small);
+    --radius-extra-small-top: var(--md-sys-shape-corner-value-extra-small-top);
+    --radius-full: var(--md-sys-shape-corner-value-full);
+    --radius-large: var(--md-sys-shape-corner-value-large);
+    --radius-large-end: var(--md-sys-shape-corner-value-large-end);
+    --radius-large-start: var(--md-sys-shape-corner-value-large-start);
+    --radius-large-top: var(--md-sys-shape-corner-value-large-top);
+    --radius-medium: var(--md-sys-shape-corner-value-medium);
+    --radius-none: var(--md-sys-shape-corner-value-none);
+    --radius-small: var(--md-sys-shape-corner-value-small);
+
+    /* ===========================
+   SHADOW LEVELS
+   Map Material elevation tokens.
+   =========================== */
+    --shadow-level0: var(--md-sys-elevation-level0);
+    --shadow-level1: var(--md-sys-elevation-level1);
+    --shadow-level2: var(--md-sys-elevation-level2);
+    --shadow-level3: var(--md-sys-elevation-level3);
+    --shadow-level4: var(--md-sys-elevation-level4);
+    --shadow-level5: var(--md-sys-elevation-level5);
+
+    /* ===========================
+   OPACITY STATES
+   Map Material state layer opacity tokens.
+   =========================== */
+
+    --opacity-dragged: var(--md-sys-dragged-state-layer-opacity);
+    --opacity-focus: var(--md-sys-focus-state-layer-opacity);
+    --opacity-hover: var(--md-sys-hover-state-layer-opacity);
+    --opacity-pressed: var(--md-sys-pressed-state-layer-opacity);
 }

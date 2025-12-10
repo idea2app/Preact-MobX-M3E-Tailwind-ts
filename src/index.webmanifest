@@ -1,8 +1,8 @@
 {
-  "name": "React-MobX-Ant-Design-ts",
-  "short_name": "React Demo",
+  "name": "Preact-MobX-M3E-Tailwind-ts",
+  "short_name": "Preact Demo",
   "start_url": ".",
-  "description": "React project scaffold based on TypeScript, MobX & Ant Design, which is inspired by WebCell scaffold.",
+  "description": "Preact project scaffold based on TypeScript, MobX, M3E & Tailwind, which is inspired by WebCell scaffold.",
   "scope": ".",
   "display": "standalone",
   "orientation": "any",
@@ -12,7 +12,7 @@
   "background_color": "transparent",
   "icons": [
     {
-      "src": "https://github.com/ant-design.png",
+      "src": "https://github.com/idea2app.png",
       "type": "image/png",
       "sizes": "460x460"
     }

@@ -1,37 +1,17 @@
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from "react-router-dom";
 
-import { PageBox } from '../component/PageBox';
-import { HomePage } from './Home';
-import { PaginationPage } from './Pagination';
-import { ScrollListPage } from './ScrollList';
+import "@m3e/theme";
+import { Navigator } from "../component/navigator";
+
+import { HomePage } from "./Home";
 
 export default () => (
-  <HashRouter>
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <PageBox narrow>
-            <HomePage />
-          </PageBox>
-        }
-      />
-      <Route
-        path="/pagination"
-        element={
-          <PageBox narrow>
-            <PaginationPage />
-          </PageBox>
-        }
-      />
-      <Route
-        path="/scroll-list"
-        element={
-          <PageBox narrow>
-            <ScrollListPage />
-          </PageBox>
-        }
-      />
-    </Routes>
-  </HashRouter>
+	<HashRouter>
+		<m3e-theme motion="expressive" color="#904a43">
+			<Navigator />
+			<Routes>
+				<Route path="/" element={<HomePage />} />
+			</Routes>
+		</m3e-theme>
+	</HashRouter>
 );
