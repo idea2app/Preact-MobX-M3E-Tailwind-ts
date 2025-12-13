@@ -10,43 +10,58 @@ importers:
     dependencies:
       '@m3e/app-bar':
         specifier: ^1.1.2
-        version: 1.1.2(lit@3.3.1)
+        version: 1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)
       '@m3e/badge':
         specifier: ^1.1.2
-        version: 1.1.2(lit@3.3.1)
+        version: 1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)
       '@m3e/button':
         specifier: ^1.1.2
-        version: 1.1.2(lit@3.3.1)
+        version: 1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)
       '@m3e/card':
         specifier: ^1.1.2
-        version: 1.1.2(lit@3.3.1)
+        version: 1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)
       '@m3e/chips':
         specifier: ^1.1.2
-        version: 1.1.2(@m3e/icon-button@1.1.2(lit@3.3.1))(lit@3.3.1)
+        version: 1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(@m3e/icon-button@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1))(lit@3.3.1)
+      '@m3e/core':
+        specifier: ^1.1.2
+        version: 1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1)
       '@m3e/dialog':
         specifier: ^1.1.2
-        version: 1.1.2(@m3e/icon-button@1.1.2(lit@3.3.1))(lit@3.3.1)
+        version: 1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(@m3e/icon-button@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1))(lit@3.3.1)
+      '@m3e/drawer-container':
+        specifier: ^1.1.2
+        version: 1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)
+      '@m3e/heading':
+        specifier: ^1.1.2
+        version: 1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)
       '@m3e/icon':
         specifier: ^1.1.2
-        version: 1.1.2(lit@3.3.1)
+        version: 1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)
       '@m3e/icon-button':
         specifier: ^1.1.2
-        version: 1.1.2(lit@3.3.1)
+        version: 1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)
       '@m3e/list':
         specifier: ^1.1.2
-        version: 1.1.2(lit@3.3.1)
+        version: 1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)
       '@m3e/menu':
         specifier: ^1.1.2
-        version: 1.1.2(lit@3.3.1)
+        version: 1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)
+      '@m3e/nav-menu':
+        specifier: ^1.1.2
+        version: 1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)
       '@m3e/paginator':
         specifier: ^1.1.2
-        version: 1.1.2(@m3e/icon-button@1.1.2(lit@3.3.1))(@m3e/select@1.1.2(lit@3.3.1))(lit@3.3.1)
+        version: 1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(@m3e/icon-button@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1))(@m3e/select@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1))(lit@3.3.1)
+      '@m3e/segmented-button':
+        specifier: ^1.1.2
+        version: 1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)
       '@m3e/select':
         specifier: ^1.1.2
-        version: 1.1.2(lit@3.3.1)
+        version: 1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)
       '@m3e/theme':
         specifier: ^1.1.2
-        version: 1.1.2(lit@3.3.1)
+        version: 1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)
       '@tailwindcss/postcss':
         specifier: ^4.1.17
         version: 4.1.17
@@ -717,6 +732,15 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@floating-ui/core@1.7.3':
+    resolution: {integrity: sha512-sGnvb5dmrJaKEZ+LDIpguvdX3bDlEllmv4/ClQ9awcmCZrlx5jQyyMWFM5kBI+EyNOCDDiKk8il0zeuX3Zlg/w==}
+
+  '@floating-ui/dom@1.7.4':
+    resolution: {integrity: sha512-OOchDgh4F2CchOX94cRVqhvy7b3AFb+/rQXyswmzmGakRfkMgoWVjfnLWkRirfLEfuD4ysVW16eXzwt3jHIzKA==}
+
+  '@floating-ui/utils@0.2.10':
+    resolution: {integrity: sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ==}
+
   '@isaacs/balanced-match@4.0.1':
     resolution: {integrity: sha512-yzMTt9lEb8Gv7zRioUilSglI0c0smZ9k5D65677DLWLtWJaXIS3CqcGyUFByYKlnUj6TkjLVs54fBl6+TiGQDQ==}
     engines: {node: 20 || >=22}
@@ -822,11 +846,28 @@ packages:
       '@m3e/icon-button': 1.1.2
       lit: ^3.3.0
 
+  '@m3e/core@1.1.2':
+    resolution: {integrity: sha512-6oNGT8hDRd8XwfEwjNfpBmq3mUu4u0vRkRnrzh0kBj1RlpIjJ7a63FcmI3mOqH3HPDO8wQRXWsKh/cofhhySmQ==}
+    peerDependencies:
+      lit: ^3.3.0
+
   '@m3e/dialog@1.1.2':
     resolution: {integrity: sha512-LNWfd8tG851EVqHjU/ZQ2CEcYzVwEQyRXqgh3wZy+TWLEFFQzbNEi6JG8sbUgSwgEkUUMxnZ+JEES894L5U12A==}
     peerDependencies:
       '@m3e/core': 1.1.2
       '@m3e/icon-button': 1.1.2
+      lit: ^3.3.0
+
+  '@m3e/drawer-container@1.1.2':
+    resolution: {integrity: sha512-W7ivXMXYU7vuOVCopMNTDqEAAE0W8uOhpeDYNMLLwYgiI3q4Uk2XlBIywRUyrer7SzbUDjCjDuMd361cSJ1GSA==}
+    peerDependencies:
+      '@m3e/core': 1.1.2
+      lit: ^3.3.0
+
+  '@m3e/heading@1.1.2':
+    resolution: {integrity: sha512-5rLTOZ8q4Q8PQ1Pvdk7B7LFbLMKrHsKu8AtsIp2iBpeDHXyy/ynFpsAvaHav1ehhIn5/FdeD8A3R++fA/b/OwA==}
+    peerDependencies:
+      '@m3e/core': 1.1.2
       lit: ^3.3.0
 
   '@m3e/icon-button@1.1.2':
@@ -853,6 +894,12 @@ packages:
       '@m3e/core': 1.1.2
       lit: ^3.3.0
 
+  '@m3e/nav-menu@1.1.2':
+    resolution: {integrity: sha512-mrs5CeADAskJZxgZJJTxEBwm39+9tgc6xXnvjCIGdJVJzRP7RUGL8KOHs4i8IcWKfCC3anKHbQEJ6DRx+7EL7w==}
+    peerDependencies:
+      '@m3e/core': 1.1.2
+      lit: ^3.3.0
+
   '@m3e/paginator@1.1.2':
     resolution: {integrity: sha512-OZBd8j/+IcRKvZxbxK7QS0G4gYEFV49jukS0OAsK+/RIEBsWGNHYI1K5U1dJbds/9B0JRwcoVXQX5OWKRQh3ig==}
     peerDependencies:
@@ -861,6 +908,12 @@ packages:
       '@m3e/icon-button': 1.1.2
       '@m3e/select': 1.1.2
       '@m3e/tooltip': 1.1.2
+      lit: ^3.3.0
+
+  '@m3e/segmented-button@1.1.2':
+    resolution: {integrity: sha512-F/gcp23V4jKNWoaci9EUg+Swnt2F7ONin+H4Au9BPk3j1lhXuI81sOoFFWKBIYK/iwf01b5jOzRxfiwc9chENQ==}
+    peerDependencies:
+      '@m3e/core': 1.1.2
       lit: ^3.3.0
 
   '@m3e/select@1.1.2':
@@ -1807,6 +1860,11 @@ packages:
   common-tags@1.8.2:
     resolution: {integrity: sha512-gk/Z852D2Wtb//0I+kRFNKKE9dIIVirjoqPoA1wJU+XePVXZfGeBpk45+A1rKO4Q43prqWBNY/MiIeRLbPWUaA==}
     engines: {node: '>=4.0.0'}
+
+  composed-offset-position@0.0.6:
+    resolution: {integrity: sha512-Q7dLompI6lUwd7LWyIcP66r4WcS9u7AL2h8HaeipiRfCRPLMWqRx8fYsjb4OHi6UQFifO7XtNC2IlEJ1ozIFxw==}
+    peerDependencies:
+      '@floating-ui/utils': ^0.2.5
 
   config-chain@1.1.13:
     resolution: {integrity: sha512-qj+f8APARXHrM0hraqXYb2/bOVSV4PvJQlNZ/DVj0QrmNM2q2euizkeuVckQ57J+W0mRH6Hvi+k50M4Jul2VRQ==}
@@ -4136,6 +4194,17 @@ snapshots:
   '@biomejs/cli-win32-x64@2.3.8':
     optional: true
 
+  '@floating-ui/core@1.7.3':
+    dependencies:
+      '@floating-ui/utils': 0.2.10
+
+  '@floating-ui/dom@1.7.4':
+    dependencies:
+      '@floating-ui/core': 1.7.3
+      '@floating-ui/utils': 0.2.10
+
+  '@floating-ui/utils@0.2.10': {}
+
   '@isaacs/balanced-match@4.0.1': {}
 
   '@isaacs/brace-expansion@5.0.0':
@@ -4205,60 +4274,101 @@ snapshots:
   '@lmdb/lmdb-win32-x64@2.8.5':
     optional: true
 
-  '@m3e/app-bar@1.1.2(lit@3.3.1)':
+  '@m3e/app-bar@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)':
     dependencies:
+      '@m3e/core': 1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1)
       lit: 3.3.1
 
-  '@m3e/badge@1.1.2(lit@3.3.1)':
+  '@m3e/badge@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)':
     dependencies:
+      '@m3e/core': 1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1)
       lit: 3.3.1
 
-  '@m3e/button@1.1.2(lit@3.3.1)':
+  '@m3e/button@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)':
     dependencies:
+      '@m3e/core': 1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1)
       lit: 3.3.1
 
-  '@m3e/card@1.1.2(lit@3.3.1)':
+  '@m3e/card@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)':
     dependencies:
+      '@m3e/core': 1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1)
       lit: 3.3.1
 
-  '@m3e/chips@1.1.2(@m3e/icon-button@1.1.2(lit@3.3.1))(lit@3.3.1)':
+  '@m3e/chips@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(@m3e/icon-button@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1))(lit@3.3.1)':
     dependencies:
-      '@m3e/icon-button': 1.1.2(lit@3.3.1)
+      '@m3e/core': 1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1)
+      '@m3e/icon-button': 1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)
       lit: 3.3.1
 
-  '@m3e/dialog@1.1.2(@m3e/icon-button@1.1.2(lit@3.3.1))(lit@3.3.1)':
+  '@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1)':
     dependencies:
-      '@m3e/icon-button': 1.1.2(lit@3.3.1)
+      '@floating-ui/dom': 1.7.4
+      composed-offset-position: 0.0.6(@floating-ui/utils@0.2.10)
+      lit: 3.3.1
+    transitivePeerDependencies:
+      - '@floating-ui/utils'
+
+  '@m3e/dialog@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(@m3e/icon-button@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1))(lit@3.3.1)':
+    dependencies:
+      '@m3e/core': 1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1)
+      '@m3e/icon-button': 1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)
       lit: 3.3.1
 
-  '@m3e/icon-button@1.1.2(lit@3.3.1)':
+  '@m3e/drawer-container@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)':
     dependencies:
+      '@m3e/core': 1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1)
       lit: 3.3.1
 
-  '@m3e/icon@1.1.2(lit@3.3.1)':
+  '@m3e/heading@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)':
     dependencies:
+      '@m3e/core': 1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1)
       lit: 3.3.1
 
-  '@m3e/list@1.1.2(lit@3.3.1)':
+  '@m3e/icon-button@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)':
     dependencies:
+      '@m3e/core': 1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1)
       lit: 3.3.1
 
-  '@m3e/menu@1.1.2(lit@3.3.1)':
+  '@m3e/icon@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)':
     dependencies:
+      '@m3e/core': 1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1)
       lit: 3.3.1
 
-  '@m3e/paginator@1.1.2(@m3e/icon-button@1.1.2(lit@3.3.1))(@m3e/select@1.1.2(lit@3.3.1))(lit@3.3.1)':
+  '@m3e/list@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)':
     dependencies:
-      '@m3e/icon-button': 1.1.2(lit@3.3.1)
-      '@m3e/select': 1.1.2(lit@3.3.1)
+      '@m3e/core': 1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1)
       lit: 3.3.1
 
-  '@m3e/select@1.1.2(lit@3.3.1)':
+  '@m3e/menu@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)':
     dependencies:
+      '@m3e/core': 1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1)
       lit: 3.3.1
 
-  '@m3e/theme@1.1.2(lit@3.3.1)':
+  '@m3e/nav-menu@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)':
     dependencies:
+      '@m3e/core': 1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1)
+      lit: 3.3.1
+
+  '@m3e/paginator@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(@m3e/icon-button@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1))(@m3e/select@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1))(lit@3.3.1)':
+    dependencies:
+      '@m3e/core': 1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1)
+      '@m3e/icon-button': 1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)
+      '@m3e/select': 1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)
+      lit: 3.3.1
+
+  '@m3e/segmented-button@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)':
+    dependencies:
+      '@m3e/core': 1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1)
+      lit: 3.3.1
+
+  '@m3e/select@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)':
+    dependencies:
+      '@m3e/core': 1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1)
+      lit: 3.3.1
+
+  '@m3e/theme@1.1.2(@m3e/core@1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1))(lit@3.3.1)':
+    dependencies:
+      '@m3e/core': 1.1.2(@floating-ui/utils@0.2.10)(lit@3.3.1)
       '@material/material-color-utilities': 0.3.0
       lit: 3.3.1
 
@@ -5430,6 +5540,10 @@ snapshots:
   commander@2.20.3: {}
 
   common-tags@1.8.2: {}
+
+  composed-offset-position@0.0.6(@floating-ui/utils@0.2.10):
+    dependencies:
+      '@floating-ui/utils': 0.2.10
 
   config-chain@1.1.13:
     dependencies:

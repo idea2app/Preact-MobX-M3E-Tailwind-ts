@@ -3,6 +3,8 @@ import { configure } from "mobx";
 import { createRoot } from "react-dom/client";
 import { serviceWorkerUpdate } from "web-utility";
 
+import "@m3e/theme";
+
 import PageRoot from "./page";
 
 import "./index.css";
