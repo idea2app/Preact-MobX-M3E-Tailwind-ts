@@ -1,0 +1,114 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.3.8/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "includes": ["**", "!.next", "!dist", "!build"],
+    "maxSize": 5242880
+  },
+  "linter": {
+    "enabled": true,
+    "domains": {
+      "react": "recommended"
+    },
+    "rules": {
+      "style": {
+        "useSingleVarDeclarator": "off",
+        "useImportType": "off",
+        "noNonNullAssertion": "off",
+        "useTemplate": "off",
+        "noParameterAssign": "warn",
+        "useNodejsImportProtocol": "off",
+        "useConsistentCurlyBraces": "error",
+        "useSelfClosingElements": "error"
+      },
+      "a11y": {
+        "useAltText": "warn",
+        "noSvgWithoutTitle": "warn",
+        "useKeyWithClickEvents": "off",
+        "useSemanticElements": "warn",
+        "noStaticElementInteractions": "warn"
+      },
+      "complexity": {
+        "noBannedTypes": "off",
+        "noCommaOperator": "warn"
+      },
+      "nursery": {
+        "useSortedClasses": {
+          "fix": "safe",
+          "level": "warn"
+        }
+      },
+      "recommended": true,
+      "security": {
+        "noBlankTarget": "error"
+      },
+      "suspicious": {
+        "noAssignInExpressions": "warn",
+        "noExplicitAny": "off",
+        "noArrayIndexKey": "off"
+      },
+      "correctness": {
+        "noEmptyPattern": "off",
+        "noUnusedFunctionParameters": "warn"
+      },
+      "performance": {
+        "noDynamicNamespaceImportAccess": "warn"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "bracketSpacing": true,
+    "bracketSameLine": false,
+    "lineWidth": 80
+  },
+  "javascript": {
+    "formatter": {
+      "arrowParentheses": "always",
+      "jsxQuoteStyle": "double",
+      "quoteStyle": "double",
+      "trailingCommas": "all",
+      "semicolons": "always"
+    }
+  },
+  "json": {
+    "formatter": {
+      "trailingCommas": "none"
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": {
+          "level": "on",
+          "options": {
+            "groups": [
+              ":PACKAGE:",
+              ":BLANK_LINE:",
+              "@m3e/**",
+              ":BLANK_LINE:",
+              "**/model/**",
+              ":BLANK_LINE:",
+              "**/component/**",
+              ":BLANK_LINE:"
+            ]
+          }
+        },
+        "useSortedAttributes": "on"
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
-import { observable } from 'mobx';
-import { GitRepository } from 'mobx-github';
+import { observable } from "mobx";
+import { GitRepository } from "mobx-github";
 
-import { repositoryStore } from './service';
+import { repositoryStore } from "./service";
 
 export interface Project extends GitRepository {
   logo?: string;
