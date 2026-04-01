@@ -1,31 +1,31 @@
-import { M3eHeading } from "@m3e/react/heading";
-import { M3eIcon } from "@m3e/react/icon";
+import { M3eHeading } from '@m3e/react/heading';
+import { M3eIcon } from '@m3e/react/icon';
 import {
   M3eButtonSegment,
-  M3eSegmentedButton,
-} from "@m3e/react/segmented-button";
-import type { M3eSegmentedButtonElement } from "@m3e/web/segmented-button";
-import { observer } from "mobx-react";
-import type { FC } from "react";
+  M3eSegmentedButton
+} from '@m3e/react/segmented-button';
+import type { M3eSegmentedButtonElement } from '@m3e/web/segmented-button';
+import { observer } from 'mobx-react';
+import type { FC } from 'react';
 
-import systemStore, { type ColorScheme } from "../model/system";
+import systemStore, { type ColorScheme } from '../model/system';
 
 export const SCHEME_OPTIONS = [
   {
-    icon: "light_mode",
-    label: "Light",
-    name: "light",
+    icon: 'light_mode',
+    label: 'Light',
+    name: 'light'
   },
   {
-    icon: "settings_brightness",
-    label: "System",
-    name: "auto",
+    icon: 'settings_brightness',
+    label: 'System',
+    name: 'auto'
   },
   {
-    icon: "dark_mode",
-    label: "Dark",
-    name: "dark",
-  },
+    icon: 'dark_mode',
+    label: 'Dark',
+    name: 'dark'
+  }
 ];
 
 export const Setting: FC = observer(() => {
@@ -41,7 +41,7 @@ export const Setting: FC = observer(() => {
         className="h-12 w-12 cursor-pointer appearance-none rounded-full border-none outline-secondary"
         id="color"
         onChange={({ target: { value } }) =>
-          systemStore.setTheme("color", value)
+          systemStore.setTheme('color', value)
         }
         type="color"
         value={color}
@@ -55,8 +55,8 @@ export const Setting: FC = observer(() => {
         id="color-scheme-button"
         onChange={({ target }) =>
           systemStore.setTheme(
-            "colorScheme",
-            (target as M3eSegmentedButtonElement).value as ColorScheme,
+            'colorScheme',
+            (target as M3eSegmentedButtonElement).value as ColorScheme
           )
         }
       >
@@ -79,8 +79,8 @@ export const Setting: FC = observer(() => {
         id="directionality-button"
         onChange={({ target }) =>
           systemStore.setTheme(
-            "direction",
-            (target as M3eSegmentedButtonElement).value as "ltr" | "rtl",
+            'direction',
+            (target as M3eSegmentedButtonElement).value as 'ltr' | 'rtl'
           )
         }
       >

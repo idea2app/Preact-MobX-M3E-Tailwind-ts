@@ -45,17 +45,23 @@ body {
   --color-on-primary: var(--md-sys-color-on-primary);
   --color-on-primary-container: var(--md-sys-color-on-primary-container);
   --color-on-primary-fixed: var(--md-sys-color-on-primary-fixed);
-  --color-on-primary-fixed-variant: var(--md-sys-color-on-primary-fixed-variant);
+  --color-on-primary-fixed-variant: var(
+    --md-sys-color-on-primary-fixed-variant
+  );
   --color-on-secondary: var(--md-sys-color-on-secondary);
   --color-on-secondary-container: var(--md-sys-color-on-secondary-container);
   --color-on-secondary-fixed: var(--md-sys-color-on-secondary-fixed);
-  --color-on-secondary-fixed-variant: var(--md-sys-color-on-secondary-fixed-variant);
+  --color-on-secondary-fixed-variant: var(
+    --md-sys-color-on-secondary-fixed-variant
+  );
   --color-on-surface: var(--md-sys-color-on-surface);
   --color-on-surface-variant: var(--md-sys-color-on-surface-variant);
   --color-on-tertiary: var(--md-sys-color-on-tertiary);
   --color-on-tertiary-container: var(--md-sys-color-on-tertiary-container);
   --color-on-tertiary-fixed: var(--md-sys-color-on-tertiary-fixed);
-  --color-on-tertiary-fixed-variant: var(--md-sys-color-on-tertiary-fixed-variant);
+  --color-on-tertiary-fixed-variant: var(
+    --md-sys-color-on-tertiary-fixed-variant
+  );
   --color-outline: var(--md-sys-color-outline);
   --color-outline-variant: var(--md-sys-color-outline-variant);
   --color-primary: var(--md-sys-color-primary);
@@ -72,9 +78,13 @@ body {
   --color-surface-bright: var(--md-sys-color-surface-bright);
   --color-surface-container: var(--md-sys-color-surface-container);
   --color-surface-container-high: var(--md-sys-color-surface-container-high);
-  --color-surface-container-highest: var(--md-sys-color-surface-container-highest);
+  --color-surface-container-highest: var(
+    --md-sys-color-surface-container-highest
+  );
   --color-surface-container-low: var(--md-sys-color-surface-container-low);
-  --color-surface-container-lowest: var(--md-sys-color-surface-container-lowest);
+  --color-surface-container-lowest: var(
+    --md-sys-color-surface-container-lowest
+  );
   --color-surface-dim: var(--md-sys-color-surface-dim);
   --color-surface-tint: var(--md-sys-color-surface-tint);
   --color-surface-variant: var(--md-sys-color-surface-variant);
@@ -109,23 +119,57 @@ body {
    Map Material font weight tokens.
    =========================== */
 
-  --font-weight-body-large-weight: var(--md-sys-typescale-body-large-font-weight);
-  --font-weight-body-medium-weight: var(--md-sys-typescale-body-medium-font-weight);
-  --font-weight-body-small-weight: var(--md-sys-typescale-body-small-font-weight);
-  --font-weight-display-large-weight: var(--md-sys-typescale-display-large-font-weight);
-  --font-weight-display-medium-weight: var(--md-sys-typescale-display-medium-font-weight);
-  --font-weight-display-small-weight: var(--md-sys-typescale-display-small-font-weight);
-  --font-weight-headline-large-weight: var(--md-sys-typescale-headline-large-font-weight);
-  --font-weight-headline-medium-weight: var(--md-sys-typescale-headline-medium-font-weight);
-  --font-weight-headline-small-weight: var(--md-sys-typescale-headline-small-font-weight);
-  --font-weight-label-large-weight: var(--md-sys-typescale-label-large-font-weight);
-  --font-weight-label-large-prominent-weight: var(--md-sys-typescale-label-large-weight-prominent);
-  --font-weight-label-medium-weight: var(--md-sys-typescale-label-medium-font-weight);
-  --font-weight-label-medium-prominent-weight: var(--md-sys-typescale-label-medium-weight-prominent);
-  --font-weight-label-small-weight: var(--md-sys-typescale-label-small-font-weight);
-  --font-weight-title-large-weight: var(--md-sys-typescale-title-large-font-weight);
-  --font-weight-title-medium-weight: var(--md-sys-typescale-title-medium-font-weight);
-  --font-weight-title-small-weight: var(--md-sys-typescale-title-small-font-weight);
+  --font-weight-body-large-weight: var(
+    --md-sys-typescale-body-large-font-weight
+  );
+  --font-weight-body-medium-weight: var(
+    --md-sys-typescale-body-medium-font-weight
+  );
+  --font-weight-body-small-weight: var(
+    --md-sys-typescale-body-small-font-weight
+  );
+  --font-weight-display-large-weight: var(
+    --md-sys-typescale-display-large-font-weight
+  );
+  --font-weight-display-medium-weight: var(
+    --md-sys-typescale-display-medium-font-weight
+  );
+  --font-weight-display-small-weight: var(
+    --md-sys-typescale-display-small-font-weight
+  );
+  --font-weight-headline-large-weight: var(
+    --md-sys-typescale-headline-large-font-weight
+  );
+  --font-weight-headline-medium-weight: var(
+    --md-sys-typescale-headline-medium-font-weight
+  );
+  --font-weight-headline-small-weight: var(
+    --md-sys-typescale-headline-small-font-weight
+  );
+  --font-weight-label-large-weight: var(
+    --md-sys-typescale-label-large-font-weight
+  );
+  --font-weight-label-large-prominent-weight: var(
+    --md-sys-typescale-label-large-weight-prominent
+  );
+  --font-weight-label-medium-weight: var(
+    --md-sys-typescale-label-medium-font-weight
+  );
+  --font-weight-label-medium-prominent-weight: var(
+    --md-sys-typescale-label-medium-weight-prominent
+  );
+  --font-weight-label-small-weight: var(
+    --md-sys-typescale-label-small-font-weight
+  );
+  --font-weight-title-large-weight: var(
+    --md-sys-typescale-title-large-font-weight
+  );
+  --font-weight-title-medium-weight: var(
+    --md-sys-typescale-title-medium-font-weight
+  );
+  --font-weight-title-small-weight: var(
+    --md-sys-typescale-title-small-font-weight
+  );
 
   /* ===========================
    LETTER SPACING (TRACKING)
@@ -160,7 +204,9 @@ body {
   --leading-display-medium: var(--md-sys-typescale-display-medium-line-height);
   --leading-display-small: var(--md-sys-typescale-display-small-line-height);
   --leading-headline-large: var(--md-sys-typescale-headline-large-line-height);
-  --leading-headline-medium: var(--md-sys-typescale-headline-medium-line-height);
+  --leading-headline-medium: var(
+    --md-sys-typescale-headline-medium-line-height
+  );
   --leading-headline-small: var(--md-sys-typescale-headline-small-line-height);
   --leading-label-large: var(--md-sys-typescale-label-large-line-height);
   --leading-label-medium: var(--md-sys-typescale-label-medium-line-height);

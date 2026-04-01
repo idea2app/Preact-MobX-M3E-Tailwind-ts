@@ -1,13 +1,13 @@
-import { M3eButton } from "@m3e/react/button";
-import { M3eCard } from "@m3e/react/card";
-import { M3eHeading } from "@m3e/react/heading";
-import { M3eIcon } from "@m3e/react/icon";
-import { observer } from "mobx-react";
-import { Component } from "react";
-import { type RouteComponentProps, withRouter } from "react-router-class-tools";
+import { M3eButton } from '@m3e/react/button';
+import { M3eCard } from '@m3e/react/card';
+import { M3eHeading } from '@m3e/react/heading';
+import { M3eIcon } from '@m3e/react/icon';
+import { observer } from 'mobx-react';
+import { Component } from 'react';
+import { type RouteComponentProps, withRouter } from 'react-router-class-tools';
 
-import projectStore, { type Project } from "../model/project";
-import { t } from "../model/translation";
+import projectStore, { type Project } from '../model/project';
+import { t } from '../model/translation';
 
 @withRouter
 @observer
@@ -16,11 +16,11 @@ export class HomePage extends Component<
 > {
   componentDidMount() {
     projectStore.getList(
-      "facebook/react",
-      "microsoft/TypeScript",
-      "mobxjs/mobx",
-      "ant-design/ant-design",
-      "EasyWebApp/KoAJAX",
+      'facebook/react',
+      'microsoft/TypeScript',
+      'mobxjs/mobx',
+      'ant-design/ant-design',
+      'EasyWebApp/KoAJAX'
     );
   }
 
@@ -33,7 +33,7 @@ export class HomePage extends Component<
     logo,
     description,
     homepage,
-    html_url,
+    html_url
   }: Project) => (
     <M3eCard className="grid h-full gap-2" key={id} variant="elevated">
       <img alt={name} className="max-w-full" slot="header" src={logo} />
@@ -55,7 +55,7 @@ export class HomePage extends Component<
           target="_blank"
           variant="tonal"
         >
-          {t("home_page")}
+          {t('home_page')}
           <M3eIcon name="open_in_new_window" slot="trailing-icon" />
         </M3eButton>
         <M3eButton
@@ -64,7 +64,7 @@ export class HomePage extends Component<
           target="_blank"
           variant="tonal"
         >
-          {t("source_code")}
+          {t('source_code')}
           <M3eIcon name="open_in_new_window" slot="trailing-icon" />
         </M3eButton>
       </div>
@@ -75,7 +75,7 @@ export class HomePage extends Component<
     return (
       <>
         <M3eHeading size="medium" variant="display">
-          {t("upstream_projects")}
+          {t('upstream_projects')}
         </M3eHeading>
         <div className="grid @2xl:grid-cols-2 @5xl:grid-cols-3 @7xl:grid-cols-4 grid-cols-1 gap-4 px-4">
           {projectStore.list.map(this.renderProject)}

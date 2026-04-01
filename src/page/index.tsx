@@ -1,7 +1,7 @@
-import { HashRouter, Route, Routes } from "react-router-dom";
-import { ThemeContainer } from "src/component/ThemeContainer";
+import { HashRouter, Route, Routes } from 'react-router-dom';
+import { ThemeContainer } from 'src/component/ThemeContainer';
 
-import { HomePage } from "./home";
+import { HomePage } from './home';
 
 export default () => (
   <HashRouter>

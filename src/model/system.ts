@@ -1,7 +1,7 @@
-import { observable } from "mobx";
-import { persist, restore } from "mobx-restful";
+import { observable } from 'mobx';
+import { persist, restore } from 'mobx-restful';
 
-export type ColorScheme = "light" | "dark" | "auto";
+export type ColorScheme = 'light' | 'dark' | 'auto';
 
 const matchColorScheme = (color: ColorScheme) =>
   globalThis.matchMedia?.(`(prefers-color-scheme: ${color})`);
@@ -9,33 +9,33 @@ const matchColorScheme = (color: ColorScheme) =>
 export class SystemModel {
   @persist()
   @observable
-  accessor color: string = "#904a43";
+  accessor color: string = '#904a43';
 
   @persist()
   @observable
-  accessor colorScheme: ColorScheme = matchColorScheme("dark").matches
-    ? "dark"
-    : matchColorScheme("light").matches
-      ? "light"
-      : "auto";
+  accessor colorScheme: ColorScheme = matchColorScheme('dark').matches
+    ? 'dark'
+    : matchColorScheme('light').matches
+      ? 'light'
+      : 'auto';
 
   @persist()
   @observable
-  accessor direction: "ltr" | "rtl" = "ltr";
+  accessor direction: 'ltr' | 'rtl' = 'ltr';
 
-  restored = restore(this, "System");
+  restored = restore(this, 'System');
 
-  setTheme(type: "colorScheme" | "direction" | "color", value: string) {
+  setTheme(type: 'colorScheme' | 'direction' | 'color', value: string) {
     switch (type) {
-      case "color":
+      case 'color':
         this.color = value;
         break;
-      case "colorScheme":
+      case 'colorScheme':
         this.colorScheme = value as ColorScheme;
         break;
-      case "direction":
+      case 'direction':
         document.documentElement.dir = value;
-        this.direction = value as "ltr" | "rtl";
+        this.direction = value as 'ltr' | 'rtl';
         break;
     }
   }

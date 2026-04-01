@@ -1,14 +1,14 @@
-import { M3eAppBar } from "@m3e/react/app-bar";
-import { M3eDrawerToggle } from "@m3e/react/drawer-container";
-import { M3eIcon } from "@m3e/react/icon";
-import { M3eIconButton } from "@m3e/react/icon-button";
-import { M3eMenu, M3eMenuItemRadio, M3eMenuTrigger } from "@m3e/react/menu";
-import { observer } from "mobx-react";
-import type { FC } from "react";
+import { M3eAppBar } from '@m3e/react/app-bar';
+import { M3eDrawerToggle } from '@m3e/react/drawer-container';
+import { M3eIcon } from '@m3e/react/icon';
+import { M3eIconButton } from '@m3e/react/icon-button';
+import { M3eMenu, M3eMenuItemRadio, M3eMenuTrigger } from '@m3e/react/menu';
+import { observer } from 'mobx-react';
+import type { FC } from 'react';
 
-import { i18n, LanguageName } from "../model/translation";
+import { i18n, LanguageName } from '../model/translation';
 
-import { GitHubIcon } from "./Svg";
+import { GitHubIcon } from './Svg';
 
 export const AppBar: FC = observer(() => {
   const { currentLanguage } = i18n;
