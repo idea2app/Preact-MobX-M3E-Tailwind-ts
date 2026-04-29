@@ -1,4 +1,4 @@
-import { IDType } from 'mobx-restful';
+import type { IDType } from 'mobx-restful';
 
 export default {
   welcome: 'Welcome',
