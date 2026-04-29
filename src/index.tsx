@@ -5,14 +5,12 @@ import { serviceWorkerUpdate } from 'web-utility';
 
 import PageRoot from './page';
 
-import './index.css';
-
 auto();
 
 configure({ enforceActions: 'never' });
 
 globalThis.addEventListener('unhandledrejection', ({ reason }) => {
-  if (reason instanceof URIError) console.error(reason.message);
+  if (reason instanceof URIError) window.alert(reason.message);
 });
 
 const { serviceWorker } = window.navigator;

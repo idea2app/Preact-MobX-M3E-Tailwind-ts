@@ -19,7 +19,7 @@ export class HomePage extends Component<
       'facebook/react',
       'microsoft/TypeScript',
       'mobxjs/mobx',
-      'ant-design/ant-design',
+      'matraic/m3e',
       'EasyWebApp/KoAJAX'
     );
   }
@@ -27,6 +27,7 @@ export class HomePage extends Component<
   componentWillUnmount() {
     projectStore.clearList();
   }
+
   renderProject = ({
     id,
     name,

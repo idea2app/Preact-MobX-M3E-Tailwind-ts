@@ -46,9 +46,9 @@ export const AppBar: FC = observer(() => {
               aria-checked={currentLanguage === key}
               checked={currentLanguage === key}
               key={key}
-              onClick={() => {
-                i18n.loadLanguages(key as keyof typeof LanguageName);
-              }}
+              onClick={() =>
+                i18n.loadLanguages(key as keyof typeof LanguageName)
+              }
               role="menuitemradio"
             >
               {key}
